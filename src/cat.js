@@ -12,11 +12,33 @@ write related tests in the test file.
    and then only increase by 4 years every
    subsequent year.
 4. Create one additional method (your choice).
-
+  
+      it ('should do this when asked', () => {
+      expect(cat.giveCommand()).to.equal("roll over");
+       });
 ---------------------- */
 
-const Animal = require('./animal');
+const Animal = require("./animal");
 
-class Cat {}
-
+class Cat extends Animal {
+  constructor(name, breed, age, legs, sound) {
+    super(age, legs, name);
+    this.breed = "Sphynx";
+    this.sound = "meow";
+  }
+  getOlder() {
+    if ((age = 1)) {
+      catYears = 15;
+      if ((age = 2)) {
+        catYears = 24;
+        if (age > 2) {
+          catYears = age + 4;
+        }
+      }
+    }
+  }
+  // giveCommand(){
+  //    return "roll over";
+  // }
+}
 module.exports = Cat;

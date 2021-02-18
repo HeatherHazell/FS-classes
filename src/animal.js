@@ -13,11 +13,18 @@ read the tests in the test file.
 ---------------------- */
 
 class Animal {
-  constructor(name) {
+  constructor(name, age, legs, sound) {
     this.name = name;
     this.age = 1;
+    this.legs = 4;
+    this.sound = "tweet!";
   }
-
+  getOlder() {
+    age++;
+  }
+  speak() {
+    return this.sound;
+  }
 }
 
 module.exports = Animal;

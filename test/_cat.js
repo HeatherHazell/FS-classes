@@ -1,22 +1,23 @@
-const { expect } = require('chai');
-const { isClass } = require('./utilities');
-const Cat = require('../src/cat');
+const { expect } = require("chai");
+const { isClass } = require("./utilities");
+const Cat = require("../src/cat");
+const Animal = require("../src/animal");
 
 let cat = null;
 
-xdescribe('Cat', () => {
+describe("Cat", () => {
   beforeEach(() => {
     cat = new Cat();
   });
 
-  describe('The Cat class', () => {
-    it('should be a class', () => {
+  describe("The Cat class", () => {
+    it("should be a class", () => {
       expect(isClass(Cat)).to.be.true;
     });
 
-    it('should ???', () => {
-      // your code here
+    it("should return the sound when called", () => {
+      Animal.sound = Cat.sound;
+      expect(cat.speak()).to.equal("meow");
     });
   });
-
 });

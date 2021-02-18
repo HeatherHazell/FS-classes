@@ -17,11 +17,21 @@ fix for the tests to work properly.
 
 ---------------------- */
 
-const Animal = require('./animal');
+const Animal = require("./animal");
 
 class Dog extends Animal {
-  constructor(name) {
-    super(name);
+  constructor(name, age, sound, legs, sticks, breed) {
+    super(name, age);
+    this.sound = "woof";
+    this.legs = 4;
+    this.sticks = 0;
+    this.breed = "Frenchie";
+  }
+  getOlder() {
+    return (this.age += 7);
+  }
+  fetch() {
+    return this.sticks++;
   }
 }
 

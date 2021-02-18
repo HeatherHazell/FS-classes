@@ -1,22 +1,21 @@
-const { expect } = require('chai');
-const { isClass } = require('./utilities');
-const Poodle = require('../src/poodle');
+const { expect } = require("chai");
+const { isClass } = require("./utilities");
+const Poodle = require("../src/poodle");
 
 let poodle = null;
 
-xdescribe('Poodles', () => {
+describe("Poodles", () => {
   beforeEach(() => {
     poodle = new Poodle();
   });
 
-  describe('The Poodle class', () => {
-    it('should be a class', () => {
+  describe("The Poodle class", () => {
+    it("should be a class", () => {
       expect(isClass(Poodle)).to.be.true;
     });
 
-    it('should ???', () => {
-      // your code here
+    it("should recieve this many hair cuts each year", () => {
+      expect(poodle.lifetimeHaircuts()).to.equal();
     });
   });
-
 });
